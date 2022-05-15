@@ -372,11 +372,11 @@ class SpriteBox extends RenderBox {
   int? _frameCallbackId;
 
   void _scheduleTick() {
-    _frameCallbackId = SchedulerBinding.instance?.scheduleFrameCallback(_tick);
+    _frameCallbackId = SchedulerBinding.instance.scheduleFrameCallback(_tick);
   }
 
   void _unscheduleTick() {
-    SchedulerBinding.instance?.cancelFrameCallbackWithId(_frameCallbackId??0);
+    SchedulerBinding.instance.cancelFrameCallbackWithId(_frameCallbackId??0);
   }
 
   void _tick(Duration timeStamp) {
